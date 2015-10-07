@@ -1,0 +1,10 @@
+#
+# Copryright 2015 Yufei Li, yufeiminds@gmail.com
+#
+
+-r requirements.txt
+
+pytest
+pytest-cov
+mock
+sphinx

@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 
+# IDE / Editor
+**.swp
+.idea
+
 # C extensions
 *.so
 
@@ -55,3 +59,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Platform
+.python-version
+.idea
+.DS_Store
