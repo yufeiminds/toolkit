@@ -2,9 +2,9 @@ language: python
 # make it explicit that we favor the new container-based travis workers
 sudo: false
 python:
-  - "2.6"
+  # - "2.6"
   - "2.7"
-  - "3.5"
+  # - "3.5"
 install: pip install -r requirements.txt
 script: make test
 notifications:

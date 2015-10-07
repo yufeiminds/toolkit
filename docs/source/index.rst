@@ -6,11 +6,6 @@
 Welcome to Toolkit's documentation!
 ===================================
 
-[![Linux Dash Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/afaqurk/linux-dash)
-
-.. |Toolkit| image:: https://travis-ci.org/yufeiminds/toolkit.png
-.. _Toolkit: https://travis-ci.org/yufeiminds/toolkit
-
 Toolkit is a library has some utils and helper function. It's also have a command line tool for managing scripts writed with python & bash.
 
 .. contents::
