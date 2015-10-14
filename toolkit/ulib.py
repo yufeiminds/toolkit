@@ -1,7 +1,8 @@
 # coding=utf8
 
 """
-:mod:`ulib` is a library for processing the unicode character or string more pythonic.
+:mod:`ulib` is a library for processing the unicode character or
+string more pythonic.
 
 .. warning:: This module not finished, don't use it on product environment.
 
@@ -33,7 +34,8 @@ def _is(u, start, end):
     try:
         oridinal = ord(u)
     except TypeError:
-        err_msg = 'ulib excepted an unicode character, but {} of length {} found'
+        err_msg = 'ulib excepted an unicode character, ' \
+                  'but {} of length {} found'
         raise NotUnicodeException(err_msg.format(type(u), len(u)))
     else:
         return True if start <= oridinal <= end else False
@@ -73,7 +75,7 @@ def is_digital(u):
     return _is(u, 0x0030, 0x0039)
 
 
-def cnlen(us):
+def uwidth(us):
     """
     Calculate the length of unicode string. length of chinese character is 2.
 
@@ -108,7 +110,8 @@ def f2h(u):
     :return:
     """
     if not type(u) is text_type:
-        raise NotUnicodeException("f2h() excepted an unicode character or string.")
+        raise NotUnicodeException("f2h() excepted an unicode "
+                                  "character or string.")
     if len(u) == 1:
         return _f2h(u)
     else:

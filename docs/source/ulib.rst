@@ -51,11 +51,11 @@ the :func:`has_cn` test if there is chinese unicode character in the unicode str
     ulib.has_cn(u'Here is not any chinese character.')
     >>> False
 
-:func:`cnlen` also can caculate unicode string that contained chinese character length simply,
+:func:`uwidth` also can caculate unicode string that contained chinese character length simply,
 
 .. code-block:: python
 
-    ulib.cnlen('Here is 中文')
+    ulib.uwidth('Here is 中文')
     >>> 12
 
-.. note:: :func:`cnlen` caculate one full-width character as two halt-width characters.
+.. note:: :func:`uwidth` caculate one full-width character as two halt-width characters.

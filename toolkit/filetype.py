@@ -6,6 +6,7 @@ Helper function for file types.
 
 from toolkit import ToolkitException
 
+
 class FiletypeException(ToolkitException):
     pass
 

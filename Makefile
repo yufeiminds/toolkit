@@ -28,3 +28,7 @@ document:
 
 pypi:
 	python setup.py sdist bdist_wheel upload
+
+clean:
+	@rm -rf dist build
+	@rm -rf tests/__pycache__

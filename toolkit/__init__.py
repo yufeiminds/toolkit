@@ -13,11 +13,13 @@ if not PY2:
     binary_type = bytes
     long_type = float
     basestring = (str, bytes)
+    string_types = (str, )
 else:
     iteritems = lambda d: d.iteritems()
     text_type = unicode  # noqa
     binary_type = str
     long_type = long  # noqa
+    string_types = (str, unicode)
 
 
 class ToolkitException(Exception):

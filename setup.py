@@ -8,7 +8,7 @@ entry_points = [
 
 setup(
     name='toolkit',
-    version='0.0.1',
+    version='0.0.2',
     description='toolkit for script and utils',
     url='http://github.com/yufeiminds/toolkit',
     license='MIT',

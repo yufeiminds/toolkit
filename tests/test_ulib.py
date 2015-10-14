@@ -22,12 +22,12 @@ def test_has_cn():
     assert not ulib.has_cn(u'Here is not any chinese character.')
 
 
-def test_cn_len():
-    assert ulib.cnlen(u'Here is en') == 10
-    assert ulib.cnlen(u'Here is 中文') == 12
+def test_uwidth():
+    assert ulib.uwidth(u'Here is en') == 10
+    assert ulib.uwidth(u'Here is 中文') == 12
 
 
-def test_c2h():
+def test_f2h():
     # TODO: Coverage all full-width character
     origin = u'｀1234567890-＝～！@＃$％……&＊（）——＋［］、｛｝｜；‘：“，。／《》？'
     dest = u'`1234567890-=~!@#$%^&*()_+[]\\{}|;\':",./<>?'
