@@ -48,4 +48,5 @@ def test_render():
 
 
 def test_render_recursive():
+    #tpl.render_recursive('toolkit', 'build')
     pass

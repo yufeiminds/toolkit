@@ -218,12 +218,20 @@ def render(template_path, output_file=None, **kwargs):
     rendered = template.render(**kwargs)
     if not output_file:
         return rendered
-    with open(output_file) as f:
+    with open(output_file, 'w') as f:
         f.write(rendered)
 
 
-def render_recursive(folder, **kwargs):
+def render_recursive(folder, output, **kwargs):
     if not os.path.isdir(folder):
         err_msg = 'render_recursive() excepted a folder, ' \
                   'but {} is not a folder.'
         raise RenderError(err_msg.format(folder))
+    def callback(args, top, names):
+        for name in names:
+            path = os.path.join(top, name)
+            if not os.path.isfile(path):
+                continue
+            output_file = os.path.join(output, path[len(folder):])
+            render(path, output_file, **args)
+    os.path.walk(folder, callback, kwargs)
