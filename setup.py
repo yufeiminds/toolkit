@@ -23,7 +23,7 @@ setup(
     zip_safe=False,
 
     tests_require=[
-        'pytest==2.5.2',
+        'pytest==9.0.3',
         'pytest-cov==1.8.1',
         'mock==1.0.1',
     ],
